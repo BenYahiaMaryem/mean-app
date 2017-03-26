@@ -11,6 +11,8 @@ import { CategoriesService } from './categories.service';
 import { BooksComponent } from './books/books.component';
 import { BooksService } from './books.service';
 import { ClientsComponent } from './clients/clients.component';
+import { ClientsService } from './clients/clients.service';
+
 // Define the routes
 const ROUTES = [
     {
@@ -25,6 +27,10 @@ const ROUTES = [
     {
         path: 'books',
         component: BooksComponent
+    },
+    {
+        path: 'clients',
+        component: ClientsComponent
     }
 ]
 
@@ -41,7 +47,7 @@ const ROUTES = [
     HttpModule,
     RouterModule.forRoot(ROUTES) // Add routes to the app
   ],
-  providers: [CategoriesService,BooksService],
+  providers: [CategoriesService,BooksService,ClientsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

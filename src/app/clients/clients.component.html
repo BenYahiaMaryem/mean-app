@@ -1,0 +1,60 @@
+<div class="container">
+     
+    <label for="_id">Id</label>
+     <input type="text"
+             
+             id="_id"
+             [(ngModel)]="client._id"
+             name="_id"
+             required/>
+  <br>
+   <label for="name">Name</label>
+     <input type="text"
+             id="name"
+             [(ngModel)]="client.name"
+             name="name"
+             required/>
+  <br>
+    <label for="password">Password</label>
+     <input type="password"
+             
+             id="password"
+             [(ngModel)]="client.password"
+             name="password"
+             required/>
+  <br>
+  
+    <label for="email">Email</label>
+    <input type="text"
+           id="email"
+           [(ngModel)]="client.email"
+           name="email"
+           required/>
+ 
+ <br>
+    <label for="tel">Tel</label>
+    <input type="tel"
+           
+           id="tel"
+           [(ngModel)]="client.tel"
+           name="tel"
+           required/>
+  <br>
+  
+    <button (click)="addClient()">Add a client</button>
+</div>
+
+<p>
+  clients works!
+</p>
+<div class="container">
+    <div class="row" *ngFor="let client of clients">
+        <div class="card card-block">
+            <h4 class="card-title">{{client.name }}</h4>
+           <button (click)="removeClient(client._id)">Delete Client</button>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+        </div>
+    </div>
+</div>
+<hr>
